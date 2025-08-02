@@ -15,27 +15,27 @@ document.addEventListener("DOMContentLoaded", function() {
     const pass_word = document.getElementById("password");
     const password = pass_word.value.trim();
 
-    let is_valid = true;
+    let isValid = true;
     let messages = [];
 
     if (username.length < 3) {
-      is_valid = false;
+      isValid = false;
       messages.push("Please use a valid username");
     }
 
     if (!(email.includes("@") && email.includes("."))){
-      is_valid = false;
+      isValid = false;
       messages.push("Please use a valid email");
     }
 
     if (password.length < 8) {
-      is_valid = false;
+      isValid = false;
       messages.push("Please use a valid password")
     }
 
     feedbackDiv.style.display = "block";
 
-    if (is_valid === true) {
+    if (isValid === true) {
       feedbackDiv.innerHTML = "Registration successful!";
       feedbackDiv.style.color = "#28a745";
     }else {
